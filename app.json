@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "visiting-card-scanner",
+    "name": "Visiting Card Scanner",
     "slug": "visiting-card-scanner",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,16 +10,37 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.visitingcard.scanner",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.VIBRATE",
+        "android.permission.RECORD_AUDIO"
+      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Visiting Card Scanner to access camera to scan visiting cards."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8d336d57-89ae-4afd-a9b3-618a1e4bb291"
+      }
+    },
+    "owner": "harigokul753"
   }
 }
